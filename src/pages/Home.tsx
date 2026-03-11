@@ -1,4 +1,4 @@
-import { ArrowRight, Code2, Cpu, Globe, Layers, Zap } from "lucide-react";
+import { ArrowRight, Code2, Cpu, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Home() {

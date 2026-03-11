@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Loader2, CheckCircle, XCircle } from "lucide-react";
+import { Mail, Phone, Loader2, CheckCircle, XCircle, Instagram, Linkedin } from "lucide-react";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import PhoneInput from 'react-phone-number-input';
@@ -111,15 +111,24 @@ export function Contact() {
                  </div>
                </div>
                
-               {/* <div className="flex items-start gap-4">
-                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                   <MapPin className="w-5 h-5 text-pink-400" />
+               <div className="pt-6 border-t border-white/5">
+                 <p className="text-sm font-medium text-gray-400 mb-4">Connect With Us</p>
+                 <div className="flex gap-4">
+                   <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-indigo-400 transition-all group">
+                     <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-indigo-400 transition-colors" />
+                   </a>
+                   <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-pink-400 transition-all group">
+                     <Instagram className="w-5 h-5 text-gray-400 group-hover:text-pink-400 transition-colors" />
+                   </a>
+                   <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-emerald-400 transition-all group">
+                     {/* Using an inline SVG for WhatsApp */}
+                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400 group-hover:text-emerald-400 transition-colors">
+                       <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                       <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1" />
+                     </svg>
+                   </a>
                  </div>
-                 <div>
-                   <p className="text-sm font-medium text-gray-400 mb-1">Headquarters</p>
-                   <p className="text-lg font-semibold text-white">123 Byte Way, Suite 500<br />San Francisco, CA 94105</p>
-                 </div>
-               </div> */}
+               </div>
              </div>
           </div>
         </div>
