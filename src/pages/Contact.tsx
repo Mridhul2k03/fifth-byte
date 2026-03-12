@@ -1,4 +1,5 @@
 import { Mail, Phone, Loader2, CheckCircle, XCircle, Instagram, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import PhoneInput from 'react-phone-number-input';
@@ -75,15 +76,27 @@ export function Contact() {
         }
       `}</style>
       <div className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-16"
+      >
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Let's Connect</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">Have an idea? Let's build it together. Reach out to start your digital journey with The Fifth Byte.</p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 items-start">
         
         {/* Contact Info (Left Side) */}
-        <div className="lg:col-span-2 space-y-8">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="lg:col-span-2 space-y-8"
+        >
           <div className="p-8 rounded-[2rem] bg-linear-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 shadow-lg relative overflow-hidden">
              {/* Decorative blob */}
              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-purple-500/20 blur-3xl rounded-full"></div>
@@ -131,10 +144,16 @@ export function Contact() {
                </div>
              </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Contact Form (Right Side) */}
-        <div className="lg:col-span-3">
+        <motion.div 
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="lg:col-span-3"
+        >
           <div className="bg-white/5 border border-white/10 rounded-[2rem] p-8 md:p-10 backdrop-blur-xl shadow-2xl">
             <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
             <form ref={formRef} className="space-y-6" onSubmit={sendEmail}>
@@ -218,7 +237,7 @@ export function Contact() {
               </div>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
     </>

@@ -1,4 +1,5 @@
 import { Github, Linkedin, Instagram } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function Team() {
   const team = [
@@ -36,15 +37,28 @@ export function Team() {
 
   return (
     <div className="pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-20 relative">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-20 relative"
+      >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/20 blur-[100px] rounded-full pointer-events-none"></div>
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6 relative z-10">Meet The Experts</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto relative z-10">We form specialized strike teams of senior talent to solve your hardest problems without the overhead.</p>
-      </div>
+      </motion.div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {team.map((member, i) => (
-          <div key={i} className="group p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 relative overflow-hidden flex flex-col items-center text-center">
+          <motion.div 
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            className="group p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 relative overflow-hidden flex flex-col items-center text-center"
+          >
             
             {/* Top Glow */}
             <div className={`absolute -top-24 left-1/2 -translate-x-1/2 w-48 h-48 bg-linear-to-b ${member.color} rounded-full mix-blend-screen filter blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none`}></div>
@@ -70,7 +84,7 @@ export function Team() {
                 <a href="https://github.com/thefifthbyte"><Github className="w-4 h-4" /></a>
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

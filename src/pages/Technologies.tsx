@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function Technologies() {
   const categories = [
@@ -34,14 +35,27 @@ export function Technologies() {
 
   return (
     <div className="pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-20 relative">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-20 relative"
+      >
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6">Our Tech Stack</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">We don't chase every new framework. We master the modern tools required to build fast, scalable, and maintainable applications.</p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {categories.map((category, idx) => (
-          <div key={idx} className="p-8 rounded-[2rem] bg-white/5 border border-white/10 flex flex-col">
+          <motion.div 
+            key={idx} 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            className="p-8 rounded-[2rem] bg-white/5 border border-white/10 flex flex-col"
+          >
             <h2 className="text-2xl font-bold text-white mb-2">{category.title}</h2>
             <p className="text-gray-400 mb-8 pb-6 border-b border-white/5">{category.desc}</p>
             
@@ -53,18 +67,24 @@ export function Technologies() {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/* Philosophy Banner */}
-      <div className="mt-20 p-10 rounded-[2rem] bg-linear-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 border border-purple-500/20 text-center relative overflow-hidden">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mt-20 p-10 rounded-[2rem] bg-linear-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 border border-purple-500/20 text-center relative overflow-hidden"
+      >
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNykiLz48L3N2Zz4=')]"></div>
         <div className="relative z-10">
           <h2 className="text-2xl font-bold text-white mb-4">Tech Agnostic Problem Solvers</h2>
           <p className="text-gray-300 max-w-3xl mx-auto">While we have our preferred stack, we believe in using the right tool for the job. We seamlessly integrate into existing monorepos, legacy systems, and client-mandated architectures.</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

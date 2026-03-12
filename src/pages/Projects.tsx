@@ -1,4 +1,4 @@
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function Projects() {
   const projects = [
@@ -38,14 +38,27 @@ export function Projects() {
 
   return (
     <div className="pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-16"
+      >
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Our Projects</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">Discover what we've been building. From open-source libraries to full-scale enterprise architectures, our work spans the entire digital spectrum.</p>
-      </div>
+      </motion.div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((p, i) => (
-          <div key={i} className="group flex flex-col p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 overflow-hidden relative">
+          <motion.div 
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            className="group flex flex-col p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 overflow-hidden relative"
+          >
             
             {/* Ambient Background Glow */}
             <div className={`absolute top-0 right-0 w-64 h-64 bg-linear-to-br ${p.color} rounded-full mix-blend-screen filter blur-[80px] opacity-10 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none`}></div>
@@ -85,7 +98,7 @@ export function Projects() {
                 View Case Study <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </button> */}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

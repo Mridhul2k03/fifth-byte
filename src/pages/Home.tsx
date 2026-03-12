@@ -1,5 +1,6 @@
 import { ArrowRight, Code2, Cpu, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export function Home() {
   const services = [
@@ -25,7 +26,13 @@ export function Home() {
           <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
             Welcome to <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-400 via-purple-400 to-pink-400">
@@ -43,25 +50,38 @@ export function Home() {
               Contact Us
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Services Section */}
       <section className="py-24 bg-slate-900/50 border-y border-white/5 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-white">Our Expertise</h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">Delivering full-stack solutions tailored to scale.</p>
-          </div>
+          </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="p-8 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-colors duration-500 group">
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="p-8 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-colors duration-500 group"
+              >
                 <div className="w-16 h-16 rounded-2xl bg-slate-950 flex items-center justify-center mb-6 shadow-inner border border-white/5 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{service.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -73,14 +93,21 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center p-6 rounded-3xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/10">
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center p-6 rounded-3xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/10"
+              >
                 <div className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-pink-400 mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-400 font-semibold tracking-wide uppercase text-sm">
                   {stat.label}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
