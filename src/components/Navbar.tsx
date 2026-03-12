@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Hexagon, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 export function Navbar() {
@@ -52,14 +52,12 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
-          <Link to="/" className="flex items-center gap-3 group cursor-pointer transition-all">
-            <div className="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-linear-to-tr from-indigo-600 via-purple-600 to-pink-500 shadow-lg shadow-purple-500/30 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
-              <Hexagon className="w-6 h-6 text-white absolute" strokeWidth={2.5} />
-              <div className="absolute inset-0 bg-white/20 rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <span className="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-gray-100 to-gray-400 group-hover:from-white group-hover:to-purple-200 transition-colors duration-300">
-              TFB
-            </span>
+          <Link to="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
+            <img 
+              src="/20260312_115106.png" 
+              alt="The Fifth Byte Logo" 
+              className="h-10 w-auto" 
+            />
           </Link>
 
           {/* Desktop Navigation */}

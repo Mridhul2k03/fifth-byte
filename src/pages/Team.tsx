@@ -1,49 +1,37 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 export function Team() {
   const team = [
     { 
-      name: "Alex Turing", 
+      name: "Mridhul Krishna", 
       role: "CEO & Founder", 
-      bio: "Former distinguished engineer at big tech. Alex guides the architectural vision and business strategy.",
-      initials: "AT", 
-      color: "from-indigo-500 to-purple-500" 
+      bio: "Highly experienced in Backend Development and AI Integration. ",
+      initials: "MK", 
+      color: "from-indigo-500 to-purple-500",
+      instagram: "https://www.instagram.com/__.mridhul.____/",
+      linkedin: "https://www.linkedin.com/in/mridhulkrishnatk/",
+      github: "https://github.com/Mridhul2k03"
     },
     { 
-      name: "Sarah Connor", 
-      role: "Lead Designer", 
-      bio: "Award-winning creative director specializing in immersive web experiences and glassmorphism aesthetics.",
-      initials: "SC", 
-      color: "from-purple-500 to-pink-500" 
+      name: "Vipin Raj", 
+      role: "Full Stack Developer", 
+      bio: "Highly experienced in Full Stack Development and UI/UX Design.",
+      initials: "VR", 
+      color: "from-purple-500 to-pink-500",
+      instagram: "https://www.instagram.com/_v_pin__/",
+      linkedin: "https://www.linkedin.com/in/vipinraj26/",
+      github: "https://github.com/VIPINRAJK26"
     },
-    { 
-      name: "Jane Doe", 
-      role: "Frontend Engineer", 
-      bio: "React and Tailwind wizard. If it animates on the screen, Jane probably wrote the code for it.",
-      initials: "JD", 
-      color: "from-pink-500 to-rose-500" 
-    },
-    { 
-      name: "John Smith", 
-      role: "Backend Architect", 
-      bio: "Obsessed with latency, throughput, and perfectly normalized databases. Keeps the servers humming.",
-      initials: "JS", 
-      color: "from-blue-500 to-indigo-500" 
-    },
-    { 
-      name: "Elena Rostova", 
-      role: "AI Specialist", 
-      bio: "PhD in Machine Learning. Elena builds custom LLM pipelines that give our clients their competitive edge.",
-      initials: "ER", 
-      color: "from-emerald-500 to-teal-500" 
-    },
-    { 
-      name: "David Chen", 
-      role: "DevOps Engineer", 
-      bio: "Automates everything. David ensures our CI/CD pipelines are flawless and deployments are boring.",
-      initials: "DC", 
-      color: "from-orange-500 to-red-500" 
-    },
+    {
+      name: "Abhinav",
+      role: "Cloud Architect",
+      bio: "Expertised in cloud based solutions and network security.",
+      initials: "KS",
+      color: "from-indigo-500 to-purple-500",
+      instagram: "https://www.instagram.com/abhinav._.aks/",
+      linkedin: "https://www.linkedin.com/in/abhinavks2002/",
+      github: "https://github.com/Mridhul2k03"
+    }
   ];
 
   return (
@@ -73,13 +61,13 @@ export function Team() {
 
             <div className="flex justify-center gap-4 mt-auto">
               <button className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-white/20 hover:text-indigo-400 transition-all text-gray-400">
-                <Twitter className="w-4 h-4" />
+                <a href="https://www.instagram.com/thefifthbyte/"><Instagram className="w-4 h-4" /></a>
               </button>
               <button className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-white/20 hover:text-purple-400 transition-all text-gray-400">
-                <Linkedin className="w-4 h-4" />
+                <a href="https://www.linkedin.com/company/the-fifth-byte/"><Linkedin className="w-4 h-4" /></a>
               </button>
               <button className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-white/20 hover:text-pink-400 transition-all text-gray-400">
-                <Github className="w-4 h-4" />
+                <a href="https://github.com/thefifthbyte"><Github className="w-4 h-4" /></a>
               </button>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Hexagon, Instagram, Linkedin, } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // WhatsApp SVG Icon wrapper
@@ -15,13 +15,12 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 group mb-4">
-              <div className="relative flex items-center justify-center w-8 h-8 rounded-xl bg-linear-to-tr from-indigo-600 via-purple-600 to-pink-500">
-                <Hexagon className="w-4 h-4 text-white absolute" strokeWidth={2.5} />
-              </div>
-              <span className="text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-gray-100 to-gray-400">
-                TFB
-              </span>
+            <div className="flex items-center mb-6">
+              <img 
+                src="/20260312_115106.png" 
+                alt="The Fifth Byte Logo" 
+                className="h-10 w-auto" 
+              />
             </div>
             <p className="text-gray-400 max-w-sm">
               Crafting premium digital experiences and software architecture for the startups of tomorrow.
@@ -49,15 +48,15 @@ export function Footer() {
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} The Fifth Byte. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="flex items-center gap-2 hover:text-purple-400 transition-colors group">
+            <a href="https://www.linkedin.com/in/thefifthbyte/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-purple-400 transition-colors group">
               <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
               <span>LinkedIn</span>
             </a>
-            <a href="#" className="flex items-center gap-2 hover:text-pink-400 transition-colors group">
+            <a href="https://www.instagram.com/thefifthbyte/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-pink-400 transition-colors group">
               <Instagram className="w-4 h-4 group-hover:scale-110 transition-transform" />
               <span>Instagram</span>
             </a>
-            <a href="#" className="flex items-center gap-2 hover:text-emerald-400 transition-colors group">
+            <a href="https://wa.me/9567252212" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-emerald-400 transition-colors group">
               <WhatsApp className="w-4 h-4 group-hover:scale-110 transition-transform" />
               <span>WhatsApp</span>
             </a>

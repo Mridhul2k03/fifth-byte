@@ -14,21 +14,21 @@ export function Technologies() {
       desc: "Scalable, secure, and robust server-side engineering.",
       color: "text-indigo-400",
       bgHover: "hover:bg-indigo-500/10 hover:border-indigo-500/30",
-      items: ["Node.js", "Python", "Go", "PostgreSQL", "GraphQL", "Redis"]
+      items: ["Python", "Django", "PostgreSQL", "MySQL", "Redis","Celery"]
     },
     {
       title: "Cloud & DevOps",
       desc: "Automated deployments and resilient infrastructure.",
       color: "text-purple-400",
       bgHover: "hover:bg-purple-500/10 hover:border-purple-500/30",
-      items: ["AWS", "Docker", "Kubernetes", "GitHub Actions", "Terraform", "Vercel"]
+      items: ["AWS", "Railway", "Render", "GitHub Actions", "Cpanel", "Vercel"]
     },
     {
       title: "AI & Data",
       desc: "Intelligent pipelines and large language model integration.",
       color: "text-emerald-400",
       bgHover: "hover:bg-emerald-500/10 hover:border-emerald-500/30",
-      items: ["OpenAI", "LangChain", "TensorFlow", "Pinecone", "Hugging Face"]
+      items: ["OpenAI", "Gemini", "OpenClaw", "Cloud", "Lovable", "Antigravity"]
     }
   ];
 

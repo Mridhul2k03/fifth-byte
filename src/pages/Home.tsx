@@ -9,7 +9,7 @@ export function Home() {
   ];
 
   const stats = [
-    { value: "50+", label: "Projects Delivered" },
+    { value: "10+", label: "Advanced Technologies" },
     { value: "100%", label: "Client Satisfaction" },
     { value: "24/7", label: "Support Available" },
     { value: "10x", label: "Performance Gain" }
@@ -18,7 +18,7 @@ export function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-24 lg:pb-32 overflow-hidden flex items-center justify-center min-h-[90vh]">
+      <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-24 lg:pb-32 overflow-hidden flex items-center justify-center min-h-[100vh]">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] max-w-7xl opacity-30 pointer-events-none">
           <div className="absolute top-20 left-1/4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
           <div className="absolute top-20 right-1/4 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>

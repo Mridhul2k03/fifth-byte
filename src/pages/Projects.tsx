@@ -3,36 +3,36 @@ import { ExternalLink, ArrowRight } from "lucide-react";
 export function Projects() {
   const projects = [
     { 
-      title: "Project Alpha", 
-      desc: "A revolutionary AI tool designed to automate complex data analysis pipelines for enterprise clients. Currently processing petabytes of data daily.", 
+      title: "E commerce Platform", 
+      desc: "High performance e-commerce platform with AI integration and real-time inventory syncing.", 
       color: "from-blue-500 to-cyan-500",
       image: "bg-slate-900",
-      tags: ["React", "Python", "TensorFlow"],
+      tags: ["React", "Python", "Redis"],
       status: "Live"
     },
     { 
-      title: "Beta Platform", 
-      desc: "Next-gen e-commerce storefront supporting high-throughput transactions. Features include dynamic cart generation and real-time inventory syncing.", 
+      title: "Job Portals", 
+      desc: "Job portals for various industries with AI integration and real-time job matching.", 
       color: "from-purple-500 to-pink-500",
       image: "bg-slate-900",
-      tags: ["Next.js", "GraphQL", "Stripe"],
-      status: "Beta"
+      tags: ["React", "PostgreSQL", "Python"],
+      status: "Live"
     },
     { 
-      title: "Gamma System", 
-      desc: "Enterprise data visualization solution. Allows executives to slice and dice their company's analytics on a secure, beautiful dashboard.", 
+      title: "Static Website", 
+      desc: "Static website for a local business with AI integration and real-time job matching.", 
       color: "from-indigo-500 to-purple-500",
       image: "bg-slate-900",
-      tags: ["TypeScript", "D3.js", "PostgreSQL"],
-      status: "In Development"
+      tags: ["React", "Next.js"],
+      status: "Live"
     },
     { 
-      title: "Delta Engine", 
-      desc: "A powerful physics engine for web applications, enabling 3D simulations directly in the browser with near-native performance.", 
+      title: "CRMS & Dashboard", 
+      desc: "Customer Relationship Management System for small businesses with AI integration and real-time job matching.", 
       color: "from-rose-500 to-orange-500",
       image: "bg-slate-900",
-      tags: ["WebGL", "Rust", "WASM"],
-      status: "Open Source"
+      tags: ["React", "Python", "MySQL"],
+      status: "Live"
     },
   ];
 
@@ -54,14 +54,14 @@ export function Projects() {
               <div className={`w-14 h-14 rounded-2xl bg-linear-to-br ${p.color} flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-white/5 group-hover:scale-110 transition-transform duration-300`}>
                 0{i+1}
               </div>
-              <div className="flex gap-3">
+              {/* <div className="flex gap-3">
                 <span className="px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-gray-300 border border-white/5 backdrop-blur-md">
                   {p.status}
                 </span>
                 <button className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors">
                   <ExternalLink className="w-4 h-4 text-gray-300" />
                 </button>
-              </div>
+              </div> */}
             </div>
 
             <div className="grow z-10">
@@ -81,9 +81,9 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-              <button className="text-sm font-bold text-white flex items-center gap-2 group/btn hover:text-purple-400 transition-colors">
+              {/* <button className="text-sm font-bold text-white flex items-center gap-2 group/btn hover:text-purple-400 transition-colors">
                 View Case Study <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </button>
+              </button> */}
             </div>
           </div>
         ))}
