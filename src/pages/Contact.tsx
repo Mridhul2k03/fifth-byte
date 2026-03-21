@@ -114,7 +114,7 @@ export function Contact() {
                  </div>
                </div>
                
-               <div className="flex items-start gap-4">
+               {/* <div className="flex items-start gap-4">
                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
                    <Phone className="w-5 h-5 text-purple-400" />
                  </div>
@@ -123,7 +123,7 @@ export function Contact() {
                    <p className="text-lg font-semibold text-white">+91 9567252212</p>
                  </div>
                </div>
-               
+                */}
                <div className="pt-6 border-t border-white/5">
                  <p className="text-sm font-medium text-gray-400 mb-4">Connect With Us</p>
                  <div className="flex gap-4">

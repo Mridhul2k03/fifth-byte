@@ -8,6 +8,7 @@ import { Team } from "./pages/Team";
 import { Technologies } from "./pages/Technologies";
 import { Contact } from "./pages/Contact";
 import { NotFound } from "./pages/NotFound";
+import { Plans } from "./pages/Plans";
 
 export function App() {
   return (
@@ -22,6 +23,7 @@ export function App() {
             <Route path="team" element={<Team />} />
             <Route path="technologies" element={<Technologies />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="plans" element={<Plans />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
