@@ -36,7 +36,7 @@ export function Navbar() {
     { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
-    { name: "Team", href: "/team" },
+    // { name: "Team", href: "/team" },
     { name: "Technologies", href: "/technologies" },
     // { name: "Plans", href: "/plans" },
     { name: "Contact", href: "/contact" },
