@@ -1,4 +1,4 @@
-import { Mail, Phone, Loader2, CheckCircle, XCircle, Instagram, Linkedin } from "lucide-react";
+import { Mail, Loader2, CheckCircle, XCircle, Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
