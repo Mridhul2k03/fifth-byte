@@ -9,7 +9,7 @@ import { Technologies } from "./pages/Technologies";
 import { Contact } from "./pages/Contact";
 import { NotFound } from "./pages/NotFound";
 import { Plans } from "./pages/Plans";
-
+import { Analytics } from "@vercel/analytics/react"
 export function App() {
   return (
     <>
@@ -28,8 +28,10 @@ export function App() {
           </Route>
         </Routes>
       </Router>
+      <Analytics />
     </>
   );
 }
 
 export default App;
+// export
