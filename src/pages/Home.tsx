@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Code2, Cpu, Globe, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
 
 export function Home() {
   const { scrollYProgress } = useScroll();

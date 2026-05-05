@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Home, FolderGit2, Info, Layers, Phone } from "lucide-react";
@@ -6,7 +6,6 @@ import { Home, FolderGit2, Info, Layers, Phone } from "lucide-react";
 export function FloatingDock() {
   const location = useLocation();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [mousePosition, setMousePosition] = useState<{ x: number; y: number } | null>(null);
 
   const navItems = [
     { name: "Home", href: "/", icon: Home },
@@ -15,15 +14,6 @@ export function FloatingDock() {
     { name: "Technologies", href: "/technologies", icon: Layers },
     { name: "Contact", href: "/contact", icon: Phone },
   ];
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
 
   return (
     <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] px-4 sm:px-0 pointer-events-none">
