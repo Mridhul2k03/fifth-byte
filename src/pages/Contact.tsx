@@ -62,7 +62,7 @@ export function Contact() {
           margin-right: 0.5rem;
         }
         .phone-input-override .PhoneInputCountrySelect {
-          background: #0f172a;
+          background: #000;
           color: white;
         }
         .phone-input-override .PhoneInputCountryIcon--square {
@@ -81,61 +81,51 @@ export function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-16"
+        className="text-center mb-24 relative"
       >
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Let's Connect</h1>
-        <p className="text-xl text-gray-400 max-w-2xl mx-auto">Have an idea? Let's build it together. Reach out to start your digital journey with The Fifth Byte.</p>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-pink-600/10 blur-[120px] rounded-full pointer-events-none" />
+        <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-tighter text-white">Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-600">Connect</span></h1>
+        <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">Have an idea? Let's build it together. Reach out to start your digital journey with The Fifth Byte.</p>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
         
         {/* Contact Info (Left Side) */}
         <motion.div 
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="lg:col-span-2 space-y-8"
         >
-          <div className="p-8 rounded-[2rem] bg-linear-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 shadow-lg relative overflow-hidden">
+          <div className="p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/[0.05] shadow-2xl relative overflow-hidden backdrop-blur-2xl">
              {/* Decorative blob */}
-             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-purple-500/20 blur-3xl rounded-full"></div>
+             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-purple-500/10 blur-[80px] rounded-full"></div>
              
-             <h3 className="text-2xl font-bold text-white mb-8 relative z-10">Contact Information</h3>
+             <h3 className="text-3xl font-black text-white mb-10 tracking-tight relative z-10">Contact Information</h3>
              
-             <div className="space-y-6 relative z-10">
-               <div className="flex items-start gap-4">
-                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                   <Mail className="w-5 h-5 text-indigo-400" />
+             <div className="space-y-8 relative z-10">
+               <div className="flex items-start gap-5">
+                 <div className="w-14 h-14 rounded-2xl bg-black/50 border border-white/[0.05] flex items-center justify-center shrink-0 shadow-inner">
+                   <Mail className="w-6 h-6 text-indigo-400" />
                  </div>
                  <div>
-                   <p className="text-sm font-medium text-gray-400 mb-1">Email Us</p>
-                   <p className="text-lg font-semibold text-white">thefifthbyte@gmail.com</p>
+                   <p className="text-sm font-medium text-gray-400 mb-1 uppercase tracking-wider">Email Us</p>
+                   <p className="text-xl font-medium text-white tracking-wide">thefifthbyte@gmail.com</p>
                  </div>
                </div>
                
-               {/* <div className="flex items-start gap-4">
-                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                   <Phone className="w-5 h-5 text-purple-400" />
-                 </div>
-                 <div>
-                   <p className="text-sm font-medium text-gray-400 mb-1">Call Us</p>
-                   <p className="text-lg font-semibold text-white">+91 9567252212</p>
-                 </div>
-               </div>
-                */}
-               <div className="pt-6 border-t border-white/5">
-                 <p className="text-sm font-medium text-gray-400 mb-4">Connect With Us</p>
+               <div className="pt-8 border-t border-white/[0.05]">
+                 <p className="text-sm font-medium text-gray-400 mb-6 uppercase tracking-wider">Connect With Us</p>
                  <div className="flex gap-4">
-                   <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-indigo-400 transition-all group">
-                     <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-indigo-400 transition-colors" />
+                   <a href="#" className="w-14 h-14 rounded-2xl bg-black/50 border border-white/[0.05] flex items-center justify-center hover:bg-white/[0.05] hover:border-white/[0.1] hover:text-indigo-400 transition-all duration-300 group hover:scale-105 shadow-inner">
+                     <Linkedin className="w-6 h-6 text-gray-400 group-hover:text-indigo-400 transition-colors" />
                    </a>
-                   <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-pink-400 transition-all group">
-                     <Instagram className="w-5 h-5 text-gray-400 group-hover:text-pink-400 transition-colors" />
+                   <a href="#" className="w-14 h-14 rounded-2xl bg-black/50 border border-white/[0.05] flex items-center justify-center hover:bg-white/[0.05] hover:border-white/[0.1] hover:text-pink-400 transition-all duration-300 group hover:scale-105 shadow-inner">
+                     <Instagram className="w-6 h-6 text-gray-400 group-hover:text-pink-400 transition-colors" />
                    </a>
-                   <a href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-emerald-400 transition-all group">
-                     {/* Using an inline SVG for WhatsApp */}
-                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400 group-hover:text-emerald-400 transition-colors">
+                   <a href="#" className="w-14 h-14 rounded-2xl bg-black/50 border border-white/[0.05] flex items-center justify-center hover:bg-white/[0.05] hover:border-white/[0.1] hover:text-emerald-400 transition-all duration-300 group hover:scale-105 shadow-inner">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400 group-hover:text-emerald-400 transition-colors">
                        <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
                        <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1" />
                      </svg>
@@ -151,37 +141,38 @@ export function Contact() {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="lg:col-span-3"
         >
-          <div className="bg-white/5 border border-white/10 rounded-[2rem] p-8 md:p-10 backdrop-blur-xl shadow-2xl">
-            <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
-            <form ref={formRef} className="space-y-6" onSubmit={sendEmail}>
+          <div className="bg-white/[0.02] border border-white/[0.05] rounded-[2.5rem] p-8 md:p-12 backdrop-blur-2xl shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
+            <h2 className="text-3xl font-black text-white mb-8 tracking-tight relative z-10">Send a Message</h2>
+            <form ref={formRef} className="space-y-6 relative z-10" onSubmit={sendEmail}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">First Name</label>
-                  <input type="text" name="first_name" required className="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all placeholder-gray-500" placeholder="John" />
+                  <label className="block text-sm font-medium text-gray-400 mb-2 tracking-wide uppercase">First Name</label>
+                  <input type="text" name="first_name" required className="w-full bg-black/50 border border-white/[0.05] rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-transparent transition-all placeholder-gray-600 font-light" placeholder="John" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
-                  <input type="text" name="last_name" required className="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all placeholder-gray-500" placeholder="Doe" />
+                  <label className="block text-sm font-medium text-gray-400 mb-2 tracking-wide uppercase">Last Name</label>
+                  <input type="text" name="last_name" required className="w-full bg-black/50 border border-white/[0.05] rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-transparent transition-all placeholder-gray-600 font-light" placeholder="Doe" />
                 </div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                  <input type="email" name="user_email" required className="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all placeholder-gray-500" placeholder="john@company.com" />
+                  <label className="block text-sm font-medium text-gray-400 mb-2 tracking-wide uppercase">Email Address</label>
+                  <input type="email" name="user_email" required className="w-full bg-black/50 border border-white/[0.05] rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-transparent transition-all placeholder-gray-600 font-light" placeholder="john@company.com" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                  <div className="flex bg-slate-900/50 border border-white/10 rounded-xl focus-within:ring-2 focus-within:ring-purple-500 focus-within:border-transparent transition-all overflow-hidden items-center px-4 py-[0.6rem]">
+                  <label className="block text-sm font-medium text-gray-400 mb-2 tracking-wide uppercase">Phone Number</label>
+                  <div className="flex bg-black/50 border border-white/[0.05] rounded-xl focus-within:ring-1 focus-within:ring-white/20 focus-within:border-transparent transition-all overflow-hidden items-center px-5 py-[0.8rem]">
                     <PhoneInput
                       international
                       defaultCountry="IN"
                       value={phoneValue}
                       onChange={setPhoneValue}
-                      className="w-full text-white bg-transparent outline-none phone-input-override"
+                      className="w-full text-white bg-transparent outline-none phone-input-override font-light"
                       placeholder="98765 43210"
                     />
                     <input type="hidden" name="phone" value={phoneValue || ""} />
@@ -190,25 +181,25 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Project Subject</label>
-                <select name="subject" required className="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all appearance-none cursor-pointer">
-                  <option value="Web Application Development" className="bg-slate-900">Web Application Development</option>
-                  <option value="Mobile App Development" className="bg-slate-900">Mobile App Development</option>
-                  <option value="UI/UX Design" className="bg-slate-900">UI/UX Design</option>
-                  <option value="AI / Machine Learning Integration" className="bg-slate-900">AI / Machine Learning Integration</option>
-                  <option value="Other" className="bg-slate-900">Other</option>
+                <label className="block text-sm font-medium text-gray-400 mb-2 tracking-wide uppercase">Project Subject</label>
+                <select name="subject" required className="w-full bg-black/50 border border-white/[0.05] rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-transparent transition-all appearance-none cursor-pointer font-light">
+                  <option value="Web Application Development" className="bg-black">Web Application Development</option>
+                  <option value="Mobile App Development" className="bg-black">Mobile App Development</option>
+                  <option value="UI/UX Design" className="bg-black">UI/UX Design</option>
+                  <option value="AI / Machine Learning Integration" className="bg-black">AI / Machine Learning Integration</option>
+                  <option value="Other" className="bg-black">Other</option>
                 </select>
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                <textarea name="message" required rows={5} className="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none placeholder-gray-500" placeholder="Tell us about your project requirements and timeline..."></textarea>
+                <label className="block text-sm font-medium text-gray-400 mb-2 tracking-wide uppercase">Message</label>
+                <textarea name="message" required rows={5} className="w-full bg-black/50 border border-white/[0.05] rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-transparent transition-all resize-none placeholder-gray-600 font-light" placeholder="Tell us about your project requirements and timeline..."></textarea>
               </div>
               
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full rounded-xl bg-linear-to-r from-indigo-500 via-purple-600 to-pink-500 text-white font-bold text-lg py-4 hover:shadow-lg hover:shadow-purple-500/25 transition-all active:scale-95 group flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full rounded-xl bg-white text-black font-bold text-lg py-5 hover:bg-gray-200 transition-all active:scale-95 group flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed mt-4 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
               >
                 {isSubmitting ? (
                   <>
@@ -223,15 +214,15 @@ export function Contact() {
               {/* Status Messages */}
               <div className={`overflow-hidden transition-all duration-300 ${submitStatus !== 'idle' ? 'max-h-16 opacity-100 mt-4' : 'max-h-0 opacity-0 m-0'}`}>
                 {submitStatus === "success" && (
-                  <div className="flex items-center gap-2 text-emerald-400 bg-emerald-500/10 p-3 rounded-lg border border-emerald-500/20">
+                  <div className="flex items-center gap-2 text-emerald-400 bg-emerald-500/10 p-4 rounded-xl border border-emerald-500/20 backdrop-blur-md">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <p className="text-sm font-medium">Message sent successfully! We'll be in touch soon.</p>
+                    <p className="text-sm font-medium tracking-wide">Message sent successfully! We'll be in touch soon.</p>
                   </div>
                 )}
                 {submitStatus === "error" && (
-                  <div className="flex items-center gap-2 text-red-400 bg-red-500/10 p-3 rounded-lg border border-red-500/20">
+                  <div className="flex items-center gap-2 text-red-400 bg-red-500/10 p-4 rounded-xl border border-red-500/20 backdrop-blur-md">
                     <XCircle className="w-5 h-5 shrink-0" />
-                    <p className="text-sm font-medium">Failed to send message. Please try again later.</p>
+                    <p className="text-sm font-medium tracking-wide">Failed to send message. Please try again later.</p>
                   </div>
                 )}
               </div>
