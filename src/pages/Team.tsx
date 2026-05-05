@@ -32,6 +32,16 @@ export function Team() {
       instagram: "https://www.instagram.com/abhinav._.aks/",
       linkedin: "https://www.linkedin.com/in/abhinavks2002/",
       github: "https://github.com/Mridhul2k03"
+    },
+    {
+      name: "Sreejishnu",
+      role: "Network Security Specialist",
+      bio: "Expertised in network security and infrastructure management.",
+      initials: "S",
+      color: "from-indigo-500 to-purple-500",
+      instagram: "https://www.instagram.com/abhinav._.aks/",
+      linkedin: "https://www.linkedin.com/in/abhinavks2002/",
+      github: "https://github.com/Mridhul2k03"
     }
   ];
 
